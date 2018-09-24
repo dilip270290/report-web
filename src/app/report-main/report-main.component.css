@@ -1,3 +1,6 @@
+.container-fluid{
+	height: 100%;
+}
 .header_view{
 	background: #fbfbfb;
 	height: 60px;
@@ -228,6 +231,12 @@
 	border: 1px solid #dadde1;
 	background: #fbfbfb;
 	padding: 10px;
+	display: inline-block;
+	height: 100%;
+	vertical-align: top;
+}
+.report_tab_view{
+	height: 100%;
 }
 .whole_report{
 
@@ -257,7 +266,7 @@
 }
 .report_tab_view .nav li a{
 	color: #4e9ce2;
-	font-size: 15px;
+	font-size: 16px;
 	margin-right: 0;
 	padding: 6px 15px;
 }
@@ -284,13 +293,171 @@
 	background: #fff;
 	padding: 10px;
 }
-.panel-heading .accordion-toggle:after {
+.report_tab_view  .panel-heading .accordion-toggle:after {
     font: normal normal normal 20px/1 FontAwesome;
     content: "\f0d7";
     float: right;
     color: #444950;
 }
-.panel-heading .accordion-toggle.collapsed:after {
+.report_tab_view  .panel-heading .accordion-toggle.collapsed:after {
     content: "\f0d9";
 }
+.report_tab_view .panel {
+	border:0;
+	box-shadow: none;
+}
+.report_tab_view .panel-heading{
+	background-color:transparent;
+	border:0;
+	padding: 10px 15px 10px 6px;
+}
+.report_tab_view .panel-heading a{
+	display: block;
+	text-decoration: none;
+}
+.report_tab_view .panel-body{
+	border:0;
+}
+.report_check_listing{
+	margin-bottom:10px;
+}
+.report_check_listing input[type="checkbox"] { display: none; }
 
+.report_check_listing input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 20px;
+  font-size:14px;
+  color: #000;
+  font-weight: normal;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+}
+
+.report_check_listing input[type="checkbox"] + label:last-child { margin-bottom: 0; }
+
+.report_check_listing input[type="checkbox"] + label:before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  -webkit-transition: all .12s, border-color .08s;
+  transition: all .12s, border-color .08s;
+}
+.report_check_listing input[type="checkbox"]:checked + label{
+	font-weight:bold;
+}
+.report_check_listing input[type="checkbox"]:checked + label:before {
+  width: 10px;
+  top: 0px;
+  left: 5px;
+  border-radius: 0;
+  opacity: 1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.select_field_view{
+	background: #f5f6f7;
+	color: #444950;
+	border:1px solid #dadde1;
+	border-radius:4px;
+	padding:15px;
+	font-size: 18px;
+	font-weight:500;
+	width:60%;
+	text-align:center;
+	margin:50px auto 0 auto;
+}
+.report_right_section{
+	width:80%;
+	display: inline-block;
+	margin:0 -1px;
+	vertical-align:top;
+}
+.right_header_view{
+	border: 1px solid #dadde1;
+    background: #fbfbfb;
+    padding: 7px;
+}
+.back_arrow{
+	display: inline-block;
+	border-right:1px solid #dadde1;
+	font-size: 30px;
+	color: #444950;
+	text-align: center;
+    padding: 5px 20px 5px 10px;
+    cursor: pointer;
+    vertical-align:middle;
+    margin-right: 15px;
+}
+.add_filter_view{
+	display: inline-block;
+	border:1px solid #dadde1;
+	background:#f5f6f7;
+	padding:8px;
+	vertical-align:middle;
+	border-radius: 4px;
+}
+.add_filter_view .repo_pro_dro{
+	font-size: 16px;
+	color: #000;
+	border-radius: 4px;
+	border:1px solid #dadde1;
+	padding:5px 10px;
+	background:#fff;
+	cursor: pointer;
+	position: relative;
+}
+.add_filter_view .repo_pro_dro .caret{
+	border-top: 6px dashed;
+    border-top: 6px solid;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+}
+.pro_drop_list{
+	
+}
+.repo_pro_dro ul{
+	position: absolute;
+	left: 0;
+	top: 100%;
+	margin:0;
+	padding:10px;
+	width: 180px;
+	background: #fff;
+	border:1px solid #dadde1;
+}
+.repo_pro_dro .panel-heading{
+	background-color:transparent;
+	border:0;
+	padding-left:0;
+	padding-right:0;
+}
+.repo_pro_dro .panel,
+.repo_pro_dro .panel-body{
+	border:0;
+	box-shadow: none;
+}
+.repo_pro_dro .panel-title a{
+	text-decoration:none;
+}
+.repo_pro_dro .panel-group {
+    margin-bottom: 0;
+}
+.repo_pro_dro .report_check_listing label{
+	padding-left: 10px !important;
+}
+.repo_pro_dro .report_check_listing input[type="checkbox"]:checked + label:before{
+	left: -8px;
+}
