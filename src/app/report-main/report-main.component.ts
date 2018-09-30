@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-report-main',
@@ -10,6 +11,9 @@ export class ReportMainComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+  	
+  	
   }
 
 }
