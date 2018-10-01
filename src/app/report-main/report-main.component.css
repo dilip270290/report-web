@@ -639,6 +639,7 @@
 	display: none;
 }
 .report_table_view{
+	position:relative;
 	background:#fff;
 	/*min-height: 100%;*/ 
 	padding-top: 10px;
@@ -652,13 +653,13 @@
 	width: 250px;
 	min-height:100%;
 	float: left;
-	border-right: 1px solid #ebebeb;
+	border-right: 1px solid #d6d5d5;
+	position: relative
 }
 .rep_col_tittle{
 	position: relative;
 	background: #ebebeb;
 	cursor: pointer;
-	border-right: 1px solid #dedddd;
 }
 .rep_col_tittle h2{
 	margin: 0;
@@ -710,7 +711,7 @@
 	box-shadow: none;
 }
 .report_detail_blog{
-	border-right: 1px solid #dedddd;
+	/*border-right: 1px solid #dedddd;*/
 }
 .listing_repo{
 	padding: 10px;
@@ -729,11 +730,22 @@
 .rep_right_col{
 	display: inline-block;
 	position: relative;
+	height: 100%;
 }
 .rep_left_col{
-	position: absolute;
+	/*position: absolute;*/
 	z-index: 1;
 }
 .rep_right_col{
-	left: 500px;
+	/*left: 500px;*/
 }
+.show_report_result{
+	position:absolute;
+	height: 50px;
+	width: 100%;
+	background: #fff;
+	left:0;
+	bottom: 0;
+	box-shadow: inset 0px 11px 8px -10px #CCC;
+}
+
