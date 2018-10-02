@@ -1,6 +1,6 @@
 .report_menu_section{
 	background: #3c8dbc;
-	padding: 10px 10px;
+	padding: 7px;
 	margin-bottom: 10px;
 }
 .logo_view{
@@ -12,14 +12,15 @@
 .report_name{
 	display: inline-block;
 	vertical-align: middle;
-	margin-left: 20px;
-	color: #fff;
-	font-size: 15px;
+	margin-left: 15px;
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.87);
+	font-weight: normal;
 }
 .report_profile{
 	cursor: pointer;
 	position: relative;
-	top: 4px;
+	top: 1px;
 }
 .report_profile span{
 	width: 35px;
@@ -35,9 +36,11 @@
 }
 .report_profile p{
 	display: inline-block;
-	color: #fff;
+	color: #ffffff;
 	font-size: 14px;
+  	font-weight: bold;
 	margin-left: 10px;
+	margin-bottom: 0;
 }
 
 
@@ -46,11 +49,11 @@
 }
 .header_view{
 	background: #fbfbfb;
-	height: 60px;
+	/*height: 60px;*/
 	border: 1px solid #e0e0e0;
 	/*box-shadow: 0 2px 15px rgba(0,0,0,0.1);*/
-	padding: 0 10px;
-	margin-bottom: 10px;
+	padding: 12px 6px;
+	margin-bottom: 4px;
 }
 .header_view > div{
 	height: 100%;
@@ -63,16 +66,17 @@
 	display: inline-block;
 	font-size: 24px;
 	cursor: pointer;
-	margin-top: 15px;
+	/*margin-top: 15px;*/
 	vertical-align: middle;
 }
 .all_report_ti{
 	display: inline-block;
 	font-size: 16px;
-	color: #4e9ce2;
-	font-weight: 700;
+	color: rgba(53, 142, 223, 0.87);
+	line-height: 24px;
+	font-weight: normal;
 	vertical-align: middle;
-    margin-top: 17px;
+    /*margin-top: 17px;*/
     margin-left: 15px;
     position: relative;
     padding-right: 20px;
@@ -81,30 +85,31 @@
 	position: absolute;
 	content: "\f105";
 	color: #4e9ce2;
-	top: -2px;
+	top: 3px;
 	right:0;
 	display: inline-block;
-    font: normal normal normal 24px/1 FontAwesome;
+    font: normal normal normal 18px/1 FontAwesome;
     text-rendering: auto; 
 }
 .new_repo_tittle{
 	display: inline-block;
 	/*border-right: 2px solid #e5e5e5;*/
 	height: 100%;
-	vertical-align: top;
+	vertical-align: middle;
 	font-size: 16px;
-	color: #515d6a;
-	font-weight: 500;
-	padding: 18px;
+	color: rgba(0, 0, 0, 0.87);
+	font-weight: normal;
+	/*padding: 18px;*/
 	position: relative;
+	padding: 0 10px;
 }
 .new_repo_tittle:after{
 	position: absolute;
 	right: 0;
 	top:50%;
 	content: '';
-	width: 2px;
-	height: 70%;
+	width: 1px;
+	height: 40px;
 	background:#e5e5e5;
 	transform: translate(0, -50%);
 }
@@ -112,43 +117,54 @@
 	display: inline-block;
 	vertical-align: middle;
 	padding-left: 10px;
-	color: #9b9b9b;
-	margin-top: 17px;
+	color: rgba(0, 0, 0, 0.54);
+	/*margin-top: 17px;*/
 	cursor: pointer;
+	font-size: 12px;
+	line-height: 28px;
 }
 .daily_time .fa-clock-o{
-	color: #ececec;
-	margin-right: 10px;
-	font-size: 20px;
+	width: 28px;
+  	height: 28px;
+  	border-radius: 4px;
+  	background-color: #f5f6f7;
+  	border: solid 1px #dadde1;
+	color: #b8b5b5;
+	margin-right: 8px;
+	font-size: 17px;
+	text-align: center;
 	vertical-align: top;
-	margin-top: 1px;
+	line-height: 26px;
 }
 .daily_time .fa-pencil{
 	display: none;
 }
-.daily_time:hover .fa-pencil{
+/*.daily_time:hover .fa-pencil{
 	display: inline-block;
-}
+}*/
 .header_right{
-	margin-top: 8px;
+	/*margin-top: 8px;*/
 }
 .save_drop{
 	display: inline-block;
 	vertical-align: middle;
 }
 .save_drop .btn-primary{
-	background-color: #3c8dbc;
-    border-color: #3c8dbc;
-    font-size:16px;
-    padding:0 20px;
-    height: 40px;
+	background-color: #3578e5;
+    border-color: #3578e5;
+    font-size:12px;
+    /*padding:0 20px;*/
+    height: 28px;
+    width: 60px;
 }
 .save_drop .btn-primary .caret{
-	margin-left: 5px;
-	border-top: 7px dashed;
-    border-top: 6px solid;
-    border-right: 6px solid transparent;
-    border-left: 6px solid transparent;
+	margin-left: 1px;
+    border-top: 7px dashed;
+    border-top: 5px solid;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    position: relative;
+    top: -1px;
 }
 .save_drop .open>.dropdown-toggle.btn-primary {
     color: #fff;
@@ -162,7 +178,22 @@
 .save_drop ul{
 	right:0;
 	left: inherit;
-	min-width: 110px;
+	min-width: 65px;
+	height: 26px;
+	border-radius: 1px;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+	background-color: #ffffff;
+	border: solid 1px #dadde1;
+	padding: 0;
+}
+.save_drop ul a{
+	font-family: Roboto;
+    font-size: 12px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.54);
 }
 .export_btn_view{
 	display: inline-block;
@@ -170,13 +201,14 @@
 	vertical-align: middle;
 }
 .export_btn_view button{
-	padding:0 22px;
-	color: #444444;
-	font-size:15px;
-	font-weight:500;
-	border-color: #dadde1;
-	background: #f5f6f7;
-	height: 40px; 
+	font-size: 12px;
+  	font-weight: normal;
+	width: 63px;
+	height: 28px;
+	border-radius: 4px;
+	background-color: #f5f6f7;
+	border: solid 1px #dadde1;
+	color: #444950;
 }
 .calender_view{
 	display: inline-block;
@@ -188,47 +220,55 @@
 }
 .calender_view .form-group:after{
 	position: absolute;
-	right: 10px;
-    top: 17px;
+	right: 7px;
+    top: 12px;
 	content: '';
-	border-top: 7px dashed;
-    border-top: 6px solid #444950;
-    border-right: 6px solid transparent;
-    border-left: 6px solid transparent;
+	border-top: 5px dashed;
+    border-top: 5px solid #444950;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
     pointer-events: none;
 }
 .calender_view .form-group input{
 	position: relative;
-	border-color: #dadde1;
-	background: #f5f6f7;
 	box-shadow: none;
-	width: 250px;
-	font-size: 14px;
-	height: 40px;
+	font-size: 12px;
 	cursor: pointer;
+	color: #444950;
+	width: 244px;
+    height: 28px;
+    border-radius: 4px;
+    background-color: #f5f6f7;
+    border: solid 1px #dadde1;
 }
 .date_calender_view{
 	display: inline-block;
 	vertical-align: middle;
-	width: 120px;
-	margin-right: 10px;
+	width: 90px;
+  	height: 28px;
+  	border-radius: 4px;
+  	background-color: #f5f6f7;
+  	border: solid 1px #dadde1;
+	margin-right: 4px;
 }
 .date_calender_view button{
 	display: block;
 	width: 100%;
-	font-size: 14px;
+	font-size: 12px;
 	text-align: left;
-	border-color: #dadde1;
-	background: #f5f6f7;
+	border-color: transparent;
+	background: transparent;
 	color: #444950;
-	height: 40px;
+	font-weight: normal;
+	padding: 5px;
 }
 .date_calender_view .caret{
-	margin-left: 7px;
-	border-top: 6px dashed;
-    border-top: 6px solid #444950;
-    border-right: 6px solid transparent;
-    border-left: 6px solid transparent;
+	margin-left: 2px;
+	margin-top: -1px;
+	border-top: 5px dashed;
+    border-top: 5px solid #444950;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
 }
 .open>.dropdown-toggle.btn-primary:focus{
 	border-color: #dadde1;
@@ -244,36 +284,39 @@
 .report_update_view span{
 	display: inline-block;
 	cursor: pointer;
-	border:1px solid #dadde1;
-	background: #f5f6f7;
-	padding: 0 10px;
-	height: 40px;
-	border-radius: 4px;
+	width: 28px;
+  	height: 28px;
+  	border-radius: 4px;
+  	background-color: #f5f6f7;
+  	border: solid 1px #dadde1;
 	vertical-align: middle;
 }
 .report_update_view p{
 	display: inline-block;
-	font-size: 14px;
-	color: #737373;
+	font-size: 12px;
+	color: rgba(0, 0, 0, 0.54);
 	width: 53%;
 	text-align: right;
-    padding-right: 10px;
+    padding-right: 6px;
     margin-bottom:0;
-    line-height: 16px;
+    line-height: normal;
+    font-weight: normal;
     vertical-align: middle;
 }
 .report_update_view span i{
-	font-size: 22px;
-	color: #b8b5b5;
-	line-height: 39px;
+	font-size: 15px;
+    color: #b8b5b5;
+    line-height: 28px;
+    display: block;
+    text-align: center;
 }
 
 /* Left section for report css */
 .report_left_section{
-	width: 20%;
-	border: 1px solid #dadde1;
-	background: #fbfbfb;
-	padding: 10px;
+	width: 201px;
+	background-color: #fbfbfb;
+  	border: solid 1px #e0e0e0;
+	padding: 7px 5px;
 	display: inline-block;
 	min-height: 100%;
 	vertical-align: top;
@@ -290,19 +333,22 @@
 }
 .whole_report .form-group i{
 	position: absolute;
-	left: 10px;
-	top: 10px;
-	content: '';
-	font-size: 20px;
+	left: 9px;
+    top: 8px;
+    content: '';
+    font-size: 12px;
+    color: rgba(184, 181, 181, 0.5);
 }
 .whole_report input{
-	border: 1px solid #dadde1;
-	background: #fff;
+	border-radius: 4px;
+  	background-color: #ffffff;
+  	border: solid 1px #dadde1;
 	box-shadow: none;
-	height: 40px;
-	padding-left: 35px;
-	font-size: 14px;
-	font-weight: 500;
+	height: 28px;
+	padding-left: 26px;
+	font-size: 12px;
+	font-weight: normal;
+	color: #444950;
 }
 .report_tab_view .nav li{
 	width: 50%;
