@@ -355,36 +355,37 @@
 	margin-bottom: -2px;
 }
 .report_tab_view .nav li a{
-	color: #4e9ce2;
-	font-size: 16px;
+	color: rgba(53, 142, 223, 0.84);
+	font-size: 12px;
 	margin-right: 0;
-	padding: 6px 15px;
+	padding: 3px 8px;
+	line-height: auto;
 }
 .report_tab_view .nav-tabs>li>a:hover{
 	background-color: #f5f5f5;
 	border-bottom-color: transparent;
 }
 .report_tab_view .tab-content{
-	border-left: 2px solid #dedddd;
-	border-right: 2px solid #dedddd;
-	border-bottom: 2px solid #dedddd;
+	border-left: 2px solid rgba(193, 190, 190, 0.5);
+	border-right: 2px solid rgba(193, 190, 190, 0.5);
+	border-bottom: 2px solid rgba(193, 190, 190, 0.5);
 }
 .report_tab_view .nav-tabs {
-    border-bottom: 2px solid #dedddd;
+    border-bottom: 2px solid rgba(193, 190, 190, 0.5);
 }
 .report_tab_view .nav-tabs>li.active>a,
 .report_tab_view .nav-tabs>li.active>a:focus,
 .report_tab_view .nav-tabs>li.active>a:hover{
-	border: 2px solid #dedddd;
+	border: 2px solid rgba(193, 190, 190, 0.5);
 	border-bottom-color: transparent;
 	background: #fff;
 }
 .report_tab_view .tab-content{
 	background: #fff;
-	padding: 10px;
+	padding: 10px 5px 0 9px;
 }
 .report_tab_view .panel-heading .accordion-toggle:after {
-    font: normal normal normal 20px/1 FontAwesome;
+    font: normal normal normal 16px/1 FontAwesome;
     content: "\f0d7";
     float: right;
     color: #444950;
@@ -399,7 +400,12 @@
 .report_tab_view .panel-heading{
 	background-color:transparent;
 	border:0;
-	padding: 10px 15px 10px 6px;
+	padding: 0 0 10px 0;
+}
+.report_tab_view .panel-heading h4{
+	font-size: 12px;
+  	font-weight: normal;
+  	color: rgba(0, 0, 0, 0.75);
 }
 .report_tab_view .panel-heading a{
 	display: block;
@@ -407,19 +413,20 @@
 }
 .report_tab_view .panel-body{
 	border:0;
+	padding: 0 0 0 10px;
 }
-.report_check_listing{
+/* .report_check_listing{
 	margin-bottom:10px;
-}
+} */
 .report_check_listing input[type="checkbox"] { display: none; }
 
 .report_check_listing input[type="checkbox"] + label {
   display: block;
   position: relative;
   padding-left: 15px;
-  margin-bottom: 20px;
-  font-size:14px;
-  color: #000;
+  font-size:12px;
+  line-height: 31px;
+  color: rgba(0, 0, 0, 0.54);
   font-weight: normal;
   cursor: pointer;
   -webkit-user-select: none;
@@ -433,11 +440,11 @@
   content: '';
   display: block;
   width: 15px;
-  height: 15px;
+  height: 12px;
   border: 2px solid #000;
   position: absolute;
-  left: -4px;
-  top: 0;
+  left: -1px;
+  top: 8px;
   opacity: 0;
   -webkit-transition: all .12s, border-color .08s;
   transition: all .12s, border-color .08s;
@@ -446,27 +453,29 @@
 	font-weight:bold;
 }
 .report_check_listing input[type="checkbox"]:checked + label:before {
-  width: 10px;
-  top: 0px;
-  left: -4px;
+  width: 6px;
+  top: 8px;
+  left: -1px;
   border-radius: 0;
   opacity: 1;
   border-top-color: transparent;
   border-left-color: transparent;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+  -webkit-transform: rotate(36deg);
+  transform: rotate(36deg);
 }
 .select_field_view{
-	background: #f5f6f7;
-	color: #444950;
-	border:1px solid #dadde1;
+	border-radius: 4px;
+  	background-color: #f5f6f7;
+ 	border: solid 1px #dadde1;
 	border-radius:4px;
-	padding:15px;
-	font-size: 15px;
-	font-weight:500;
-	width:87%;
+	padding:6px 6px;
+	color: #444950;
+	font-weight:normal;
+	width:118px;
 	text-align:center;
-	margin:50px auto 0 auto;
+	margin:46px auto 20px auto;
+	font-size: 12px;
+	line-height: 18px;
 }
 .report_right_section{
 	width:80%;
@@ -476,46 +485,48 @@
 	height: 100%;
 }
 .right_header_view{
-	border: 1px solid #dadde1;
-    background: #fbfbfb;
-    padding: 7px;
+	background-color: #fbfbfb;
+  	border: solid 1px #e0e0e0;
+	padding: 5px 8px 0 8px;
+	/*height:37px;*/
 }
 .back_arrow{
 	display: inline-block;
 	border-right:1px solid #dadde1;
-	font-size: 30px;
+	font-size: 20px;
 	color: #444950;
 	text-align: center;
-    padding: 5px 20px 5px 10px;
+    padding: 0px 10px 0px 2px;
     cursor: pointer;
     vertical-align:middle;
-    margin-right: 15px;
+    margin-right: 10px;
 }
 .add_filter_view{
 	display: inline-block;
-	border:1px solid #dadde1;
-	background:#f5f6f7;
-	padding:8px;
+	background-color: #fbfbfb;
+  	border: solid 1px #e0e0e0;
+	padding:5px 5px 0 5px;
 	vertical-align:middle;
 	border-radius: 4px;
+
 }
 .add_filter_view .repo_pro_dro{
-	font-size: 14px;
+	font-size: 12px;
 	color: #000;
 	border-radius: 4px;
-	border:1px solid #dadde1;
-	padding:5px 10px;
-	background:#fff;
+  	background-color: #ffffff;
+  	border: solid 1px #dadde1;
 	cursor: pointer;
 	position: relative;
 	display: inline-block;
-	width: 135px;
+	width: 100px;
+	padding:0 3px;
 }
 .add_filter_view .repo_pro_dro .caret{
-	border-top: 6px dashed;
-    border-top: 6px solid;
-    border-right: 6px solid transparent;
-    border-left: 6px solid transparent;
+	border-top: 4px dashed;
+    border-top: 4px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
 }
 .pro_drop_list{
 	
@@ -617,7 +628,7 @@
   transform: rotate(45deg);
 }
 .contains_dropdown_view{
-	width: 100px !important;
+	width: 80px !important;
 	margin-left: 5px;
 	margin-right: 5px;
 }
@@ -626,36 +637,47 @@
 }
 .add_contain_view{
 	vertical-align: top;
-	width: 100px !important;
+	width: 92px !important;
+	
 	display: inline-block;
 }
 .add_contain_view input{
-	height: 32px;
 	box-shadow: none;
-	border: 1px solid #dadde1;
+	height: 23px;
+	border-radius: 4px;
+	background-color: #ffffff;
+	border: solid 1px #dadde1;
+	padding:0 5px;
 }
 .rep_filt_close{
 	display: inline-block;
-	vertical-align: top;
-	font-size: 20px;
-    line-height: 29px;
-    margin-left: 5px;
+    vertical-align: top;
+    font-size: 15px;
+    line-height: 22px;
+    margin-left: 9px;
     cursor: pointer;
+    margin-right: 5px;
 }
 .plus_filter_view{
 	display: inline-block;
-	font-size: 30px;
-	margin-left: 10px;
+	margin-left: 8px;
 	cursor: pointer;
 	color: #799ce2;
 	vertical-align: middle;
+	width: 28px;
+	height: 28px;
+}
+.plus_filter_view img{
+	width: 100%;
+	height: 100%;
 }
 .narrow_filter{
 	display: inline-block;
-	padding-left: 10px;
+	padding-left: 12px;
 	margin-bottom: 0;
+	font-size: 12px;
     vertical-align: middle;
-    color: #737373;
+    color: rgba(0, 0, 0, 0.54);
 }
 .change_dima_view{
 	position: relative;
@@ -668,14 +690,15 @@
     padding: 5px 10px;
     background: #f5f6f7;
     cursor: pointer;
-    margin-top: 8px;
-    margin-bottom:8px;
+    font-size: 12px;
+    /*margin-top: 8px;
+    margin-bottom:8px;*/
 }
 .change_dima_view .repo_pro_dro .caret{
-    border-top: 6px dashed;
-    border-top: 6px solid;
-    border-right: 6px solid transparent;
-    border-left: 6px solid transparent;
+    border-top: 5px dashed;
+    border-top: 5px solid;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
 }
 .change_dima_view ul{
 	right: 0;
