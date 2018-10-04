@@ -313,7 +313,7 @@
 
 /* Left section for report css */
 .report_left_section{
-	width: 201px;
+	width: 15%;
 	background-color: #fbfbfb;
   	border: solid 1px #e0e0e0;
 	padding: 7px 5px;
@@ -478,7 +478,7 @@
 	line-height: 18px;
 }
 .report_right_section{
-	width:80%;
+	width:85%;
 	display: inline-block;
 	margin:0 0;
 	vertical-align:top;
@@ -540,7 +540,7 @@
 	width: 180px;
 	background: #fff;
 	border:1px solid #dadde1;
-	z-index: 1;
+	z-index: 2;
 }
 .repo_pro_dro .panel-heading{
 	background-color:transparent;
@@ -553,8 +553,11 @@
 	border:0;
 	box-shadow: none;
 }
+.repo_pro_dro .panel-body{
+	padding: 5px;
+}
 .repo_pro_dro .panel-title{
-	font-size: 15px;
+	font-size: 12px;
 }
 .repo_pro_dro .panel-title a{
 	text-decoration:none;
@@ -567,7 +570,7 @@
 	padding-left: 10px !important;
 }
 .repo_pro_dro .report_check_listing input[type="radio"]:checked + label:before{
-	left: -8px !important;
+	left: -4px !important;
 }
 .add_filter_view .panel-heading .accordion-toggle:after{
     font: normal normal normal 20px/1 FontAwesome;
@@ -589,7 +592,7 @@
   position: relative;
   padding-left: 15px;
   margin-bottom: 20px;
-  font-size:14px;
+  font-size:12px;
   color: #000;
   font-weight: normal;
   cursor: pointer;
@@ -604,7 +607,7 @@
   content: '';
   display: block;
   width: 15px;
-  height: 15px;
+  height: 10px;
   border: 2px solid #000;
   position: absolute;
   left: -4px;
@@ -617,15 +620,15 @@
 	font-weight:bold;
 }
 .repo_pro_dro .report_check_listing input[type="radio"]:checked + label:before {
-  width: 10px;
-  top: 0px;
+  width: 6px;
+  top: 2px;
   left: -4px;
   border-radius: 0;
   opacity: 1;
   border-top-color: transparent;
   border-left-color: transparent;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+  -webkit-transform: rotate(40deg);
+  transform: rotate(40deg);
 }
 .contains_dropdown_view{
 	width: 80px !important;
@@ -664,8 +667,8 @@
 	cursor: pointer;
 	color: #799ce2;
 	vertical-align: middle;
-	width: 26px;
-	height: 26px;
+	width: 29px;
+	height: 29px;
 }
 .plus_filter_view img{
 	width: 100%;
@@ -817,5 +820,8 @@
 	left:0;
 	bottom: 0;
 	box-shadow: inset 0px 11px 8px -10px #CCC;
+}
+.date_calender_view .dropdown-menu>li>a{
+	font-size: 12px;
 }
 
