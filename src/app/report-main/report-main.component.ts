@@ -17,7 +17,7 @@ export class ReportMainComponent implements OnInit {
 	    let reportMenu = $('.report_menu_section').height();
 	    let headerView = $('.header_view').height();
 	    
-	    let removeHeight = windowHeight - reportMenu - headerView - 42;
+	    let removeHeight = windowHeight - reportMenu - headerView - 55;
 
 	    $('.container-fluid').css("height", removeHeight);
 
@@ -37,7 +37,7 @@ export class ReportMainComponent implements OnInit {
 	    let headerView = $('.header_view').height();
 	    let rightHeaderView = $('.right_header_view').height();
 	    
-	    let removeHeight = windowHeight - reportMenu - headerView - rightHeaderView - 60;
+	    let removeHeight = windowHeight - reportMenu - headerView - rightHeaderView - 70;
 
 	    $('.report_table_view').css("height", removeHeight);
 

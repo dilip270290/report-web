@@ -736,18 +736,24 @@
 }
 .rep_col_tittle h2{
 	margin: 0;
-	line-height: 38px;
-	height: 40px;
-	font-size: 15px;
+	line-height: 34px;
+	height: 34px;
+	font-size: 12px;
 	font-weight: 600;
-	padding-left: 40px;
+	padding-left: 24px;
 	padding-right: 40px;
 }
 .drag_col_icon{
 	position: absolute;
-	left:10px;
-	top:10px;
+	left:6px;
+	top:2px;
 	cursor: pointer;
+	width: 7px;
+	height: 13px;
+}
+.drag_col_icon img{
+	width: 100%;
+	height: 100%;
 }
 .rep_col_tittle .dropdown{
 	position: absolute;
@@ -773,13 +779,14 @@
 .rep_col_tittle .dropdown .btn{
 	background-color: transparent;
     border-color: transparent;
+    padding: 2px 12px;
 }
 .rep_col_tittle .btn .caret{
 	color: #444950;
-	border-top: 6px dashed;
-    border-top: 6px solid;
-    border-right: 6px solid transparent;
-    border-left: 6px solid transparent;
+	border-top: 5px dashed;
+    border-top: 5px solid;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
 }
 .rep_col_tittle .btn:active{
 	box-shadow: none;
@@ -788,17 +795,28 @@
 	/*border-right: 1px solid #dedddd;*/
 }
 .listing_repo{
-	padding: 10px;
+	/*padding: 10px;*/
+	padding: 0 26px;
 	background: #fbfbfb;
+	height: 45px;
 }
 .listing_repo h5, .listing_repo h6{
 	margin: 0;
 }
 .listing_repo h5{
-	line-height: 30px;
+	color: #5b5c5e;
+	font-size: 12px;
+	padding-top: 7px;
+    padding-bottom: 4px;
+}
+.listing_repo h6{
+	font-size: 10px;
 }
 .empty_repo{
-	height: 35px;
+	height: 45px;
+}
+.rep_right_col .listing_repo h5{
+	line-height: 31px;	
 }
 .rep_left_col,
 .rep_right_col{
@@ -806,6 +824,9 @@
 	position: relative;
 	height: 100%;
 	vertical-align:top;
+}
+.repo_white{
+	background:#ffffff;
 }
 .rep_left_col{
 	/*position: absolute;*/
