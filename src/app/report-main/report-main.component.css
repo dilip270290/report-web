@@ -631,7 +631,7 @@
   transform: rotate(40deg);
 }
 .contains_dropdown_view{
-	width: 80px !important;
+	width: 75px !important;
 	margin-left: 5px;
 	margin-right: 5px;
 }
@@ -723,7 +723,7 @@
     /*height: 500px;*/
 }
 .rep_col_fix{
-	width: 250px;
+	min-width: 100px;
 	min-height:100%;
 	float: left;
 	border-right: 1px solid #d6d5d5;
@@ -741,6 +741,7 @@
 	font-size: 15px;
 	font-weight: 600;
 	padding-left: 40px;
+	padding-right: 40px;
 }
 .drag_col_icon{
 	position: absolute;
@@ -797,13 +798,14 @@
 	line-height: 30px;
 }
 .empty_repo{
-	height: 70px;
+	height: 35px;
 }
 .rep_left_col,
 .rep_right_col{
 	display: inline-block;
 	position: relative;
 	height: 100%;
+	vertical-align:top;
 }
 .rep_left_col{
 	/*position: absolute;*/
