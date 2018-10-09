@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
 import * as $ from 'jquery';
 
 @Component({
@@ -7,8 +7,44 @@ import * as $ from 'jquery';
   styleUrls: ['./report-main.component.css']
 })
 export class ReportMainComponent implements OnInit {
+	
+	@HostListener('document:click', ['$event'])
+	clickout(event: any) {
+		if (this.eRef.nativeElement.contains(event.target)) {
+			console.log(event.srcElement.className);
+			// if (event.srcElement.className == '') {
+			// 	this.isShow = false;	
+			// 	this.isProduct = false;
+			// 	this.isContains = false;
+			// } 
+			// if (event.srcElement.className !== 'pro_drop_list') {
+			// 	this.isShow = false;
+			// }
+			if (event.srcElement.className === 'pro_drop_list ch_rep') {
+				this.isProduct = false;
+				this.isContains = false;
+			} else if (event.srcElement.className === 'pro_drop_list') {
+				this.isShow = false;
+				this.isProduct = false;
+			} else if (event.srcElement.className === 'pro_drop_list pro_li_drop') {
+				this.isContains = false;
+				this.isShow = false;
+			} else {
+				this.isShow = false;	
+				this.isProduct = false;
+				this.isContains = false;
+			}
+		}else{
+			this.isShow = false;	
+			this.isProduct = false;
+			this.isContains = false;
+		}
+	}
 
-  constructor() { }
+  isShow = false;	
+  isProduct = false;
+  isContains = false;
+  constructor(private eRef: ElementRef) { }
 
   ngOnInit() {
 	$(document).ready(function() {
@@ -49,5 +85,27 @@ export class ReportMainComponent implements OnInit {
 	    setHeight1();
 	  });
 	});
+  }
+
+  showFilters() {
+  	if (this.isShow) {
+  		this.isShow = false;
+  	} else {
+  		this.isShow = true;
+  	}
+  }
+  showProduct() {
+  	if (this.isProduct) {
+  		this.isProduct = false;
+  	} else {
+  		this.isProduct = true;
+  	}
+  }
+  showContains() {
+  	if (this.isContains) {
+  		this.isContains = false;
+  	} else {
+  		this.isContains = true;
+  	}
   }
 }

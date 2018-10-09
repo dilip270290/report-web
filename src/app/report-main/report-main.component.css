@@ -707,10 +707,15 @@
 .change_dima_view ul{
 	right: 0;
 	left: inherit;
+	width: 150px;
+	border-radius: 1px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border: solid 1px #dadde1;
 }
-.repo_pro_dro ul{
+/*.repo_pro_dro ul{
 	display: none;
-}
+}*/
 .report_table_view{
 	position:relative;
 	background:#fff;
@@ -721,6 +726,43 @@
 	white-space: nowrap;
 	/*width: 1063px;*/
     /*height: 500px;*/
+}
+.dragtittle{
+	font-size: 12px;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.9);
+}
+.draghere_list{
+	margin-bottom: 10px;
+}
+.drag_view{
+	padding-left: 15px;
+	position: relative;
+	border-radius: 4px;
+    background-color: #f5f6f7;
+    border: solid 1px #dadde1;
+    font-size: 12px;
+  	font-weight: 300;
+  	line-height: 1.75;
+  	color: rgba(0, 0, 0, 0.7);
+  	cursor: all-scroll;
+  	margin-bottom: 1px;
+}
+.drag_view > img{
+	position: absolute;
+	left: 3px;
+	width: 7px;
+	height: 13px;
+	top: 5px;
+}
+.drag_view .fa_close{
+	position: absolute;
+	right: 3px;
+	top: 5px;
+	width: 11px;
+	height: 11px;
+	cursor: pointer;
+	left: inherit;
 }
 .rep_col_fix{
 	min-width: 100px;
@@ -824,6 +866,7 @@
 	position: relative;
 	height: 100%;
 	vertical-align:top;
+	border-bottom: 1px solid #d6d5d5;
 }
 .repo_white{
 	background:#ffffff;
@@ -836,15 +879,42 @@
 	/*left: 500px;*/
 }
 .show_report_result{
-	position:absolute;
-	height: 50px;
+	/*position:absolute;*/
+	min-height: 50px;
 	width: 100%;
 	background: #fff;
 	left:0;
 	bottom: 0;
 	box-shadow: inset 0px 11px 8px -10px #CCC;
+	padding-left: 24px;
+	padding-right: 10px;
 }
 .date_calender_view .dropdown-menu>li>a{
 	font-size: 12px;
+}
+.show_report_result h5{
+  font-size: 12px;
+  font-weight: normal;
+  color: #5b5c5e;
+  margin: 0;
+  padding: 15px 0 5px 0;
+}
+.show_report_result h6{
+  font-size: 8px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(91, 92, 94, 1);
+  margin: 0;
+}
+.rep_right_col .show_report_result{
+	padding-left: 0;
+	padding-right: 15px;
+}
+.rep_right_col .show_report_result h5,
+.rep_right_col .show_report_result h6{
+	text-align: right;
 }
 
