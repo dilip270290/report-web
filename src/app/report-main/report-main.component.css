@@ -476,6 +476,7 @@
 	margin:46px auto 20px auto;
 	font-size: 12px;
 	line-height: 18px;
+	cursor: pointer;
 }
 .report_right_section{
 	width:85%;
