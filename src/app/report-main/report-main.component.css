@@ -145,6 +145,7 @@
 .header_right{
 	/*margin-top: 8px;*/
 }
+.save_btn_drop,
 .save_drop{
 	display: inline-block;
 	vertical-align: middle;
@@ -153,9 +154,19 @@
 	background-color: #3578e5;
     border-color: #3578e5;
     font-size:12px;
-    /*padding:0 20px;*/
+    height: 28px;
+    width: 28px;
+    padding:0;
+}
+.save_btn_drop .btn-primary{
+	background-color: #3578e5 !important;
+    border-color: #3578e5 !important;
+    font-size:12px;
+    padding: 4px 12px 6px 12px;
     height: 28px;
     width: 60px;
+    margin-right:2px;
+    color: #fff !important;
 }
 .save_drop .btn-primary .caret{
 	margin-left: 1px;
@@ -166,12 +177,18 @@
     position: relative;
     top: -1px;
 }
+.save_btn_drop .open>.dropdown-toggle.btn-primary,
 .save_drop .open>.dropdown-toggle.btn-primary {
     color: #fff;
-    background-color: #3c8dbc;
-    border-color: #3c8dbc;
+    background-color: #3578e5 !important;
+    border-color: #3578e5 !important;
 }
-.save_drop .btn-primary:active:hover{
+.save_drop .btn-primary:active:hover,
+.save_btn_drop .btn-primary:active:hover{
+	background-color: #3578e5;
+    border-color: #3578e5;
+}
+.save_drop .open > .dropdown-toggle.btn-primary{
 	background-color: #3c8dbc;
     border-color: #3c8dbc;
 }
@@ -209,6 +226,7 @@
 	background-color: #f5f6f7;
 	border: solid 1px #dadde1;
 	color: #444950;
+	padding: 4px 12px 6px 12px;
 }
 .calender_view{
 	display: inline-block;
@@ -313,11 +331,13 @@
 
 /* Left section for report css */
 .report_left_section{
-	width: 15%;
+	/*width: 15%;*/
+	width: 200px;
+	display: inline-block;
 	background-color: #fbfbfb;
   	border: solid 1px #e0e0e0;
 	padding: 7px 5px;
-	display: inline-block;
+	/*display: inline-block;*/
 	min-height: 100%;
 	vertical-align: top;
 	/*overflow-y: scroll;*/
@@ -479,8 +499,10 @@
 	cursor: pointer;
 }
 .report_right_section{
-	width:85%;
-	display: inline-block;
+	/*width:85%;
+	display: inline-block;*/
+	width: 100%;
+	display: table-cell;
 	margin:0 0;
 	vertical-align:top;
 	height: 100%;
@@ -917,5 +939,9 @@
 .rep_right_col .show_report_result h5,
 .rep_right_col .show_report_result h6{
 	text-align: right;
+}
+.table_view_section{
+	display: table;
+	width: 100%;
 }
 

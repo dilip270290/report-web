@@ -1,4 +1,4 @@
-<div class="report_menu_section clearfix">
+<!-- <div class="report_menu_section clearfix">
   <div class="logo_view">
     <img src="../assets/Brand-Royale.png" alt="logo" class="img-responsive">
   </div>
@@ -9,7 +9,7 @@
     <span><img src="../assets/user-profile.jpg" alt="logo" class="img-responsive"></span>
     <p>Maciek Marchlewski</p>
   </div>
-</div> 
+</div>  -->
 
 <div class="container-fluid">
   <div class="clearfix header_view">
@@ -53,10 +53,12 @@
         <div class="export_btn_view">
           <button type="button" class="btn">Export</button>
         </div><!-- export_btn_view End -->
+        <div class="save_btn_drop">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">save</button>
+        </div>
         <div class="save_drop">
           <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">save
-            <span class="caret"></span></button>
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><span class="caret"></span></button>
             <ul class="dropdown-menu">
               <li><a href="#" data-toggle="modal" data-target="#myModal">Save as...</a></li>
             </ul>
@@ -64,878 +66,1033 @@
         </div>
       </div>
   </div>
-  <div class="report_left_section">
-    <div class="whole_report">
-      <div class="form-group">
-        <i class="fa fa-search" aria-hidden="true"></i>
-        <input class="form-control" id="" placeholder="Search Columns" type="text" value="Search Columns">
-      </div>
-    </div><!-- whole_report End -->
-    <div class="report_tab_view">
-      <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#dimensions">Dimensions</a></li>
-        <li><a data-toggle="tab" href="#field">Fields</a></li>
-      </ul>
-      <div class="tab-content">
-        <div id="dimensions" class="tab-pane fade in active">
-          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <div class="panel panel-default">
-              <div class="panel-heading" role="tab" id="headingOne">
-                <h4 class="panel-title">
-                  <a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Primary Dimensions
-                  </a>
-                </h4>
+  <div class="table_view_section">
+    <div class="report_left_section">
+      <div class="whole_report">
+        <div class="form-group">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <input class="form-control" id="" placeholder="Search Columns" type="text" value="Search Columns">
+        </div>
+      </div><!-- whole_report End -->
+      <div class="report_tab_view">
+        <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" href="#dimensions">Dimensions</a></li>
+          <li><a data-toggle="tab" href="#field">Fields</a></li>
+        </ul>
+        <div class="tab-content">
+          <div id="dimensions" class="tab-pane fade in active">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Primary Dimensions
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    <div class="report_check_listing">
+                      <input type="checkbox" id="company">
+                      <label for="company">Company</label>
+                    </div>
+                    <div class="report_check_listing">
+                      <input type="checkbox" id="master">
+                      <label for="master">Master Product</label>
+                    </div>
+                    <div class="report_check_listing">
+                      <input type="checkbox" id="campaign">
+                      <label for="campaign">Campaign</label>
+                    </div>
+                    <div class="report_check_listing">
+                      <input type="checkbox" id="promotion">
+                      <label for="promotion">Promotion</label>
+                    </div>
+                    <div class="report_check_listing">
+                      <input type="checkbox" id="list">
+                      <label for="list">List</label>
+                    </div>
+                    <div class="report_check_listing">
+                      <input type="checkbox" id="order">
+                      <label for="order">Order</label>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                <div class="panel-body">
-                  <div class="report_check_listing">
-                    <input type="checkbox" id="company">
-                    <label for="company">Company</label>
-                  </div>
-                  <div class="report_check_listing">
-                    <input type="checkbox" id="master">
-                    <label for="master">Master Product</label>
-                  </div>
-                  <div class="report_check_listing">
-                    <input type="checkbox" id="campaign">
-                    <label for="campaign">Campaign</label>
-                  </div>
-                  <div class="report_check_listing">
-                    <input type="checkbox" id="promotion">
-                    <label for="promotion">Promotion</label>
-                  </div>
-                  <div class="report_check_listing">
-                    <input type="checkbox" id="list">
-                    <label for="list">List</label>
-                  </div>
-                  <div class="report_check_listing">
-                    <input type="checkbox" id="order">
-                    <label for="order">Order</label>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Variant Dimention
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="panel-body">
+                    <div class="report_check_listing">
+                      <input type="checkbox" id="company-1">
+                      <label for="company-1">Company</label>
+                    </div>
+                    <div class="report_check_listing">
+                      <input type="checkbox" id="master-2">
+                      <label for="master-2">Master Product</label>
+                    </div>
+                    <div class="report_check_listing">
+                      <input type="checkbox" id="campaign-3">
+                      <label for="campaign-3">Campaign</label>
+                    </div>
+                    <div class="report_check_listing">
+                      <input type="checkbox" id="promotion-4">
+                      <label for="promotion-4">Promotion</label>
+                    </div>
+                    <div class="report_check_listing">
+                      <input type="checkbox" id="list-5">
+                      <label for="list-5">List</label>
+                    </div>
+                    <div class="report_check_listing">
+                      <input type="checkbox" id="order-6">
+                      <label for="order-6">Order</label>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="panel panel-default">
-              <div class="panel-heading" role="tab" id="headingTwo">
-                <h4 class="panel-title">
-                  <a class="accordion-toggle collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Variant Dimention
-                  </a>
-                </h4>
-              </div>
-              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                <div class="panel-body">
-                  <div class="report_check_listing">
-                    <input type="checkbox" id="company-1">
-                    <label for="company-1">Company</label>
-                  </div>
-                  <div class="report_check_listing">
-                    <input type="checkbox" id="master-2">
-                    <label for="master-2">Master Product</label>
-                  </div>
-                  <div class="report_check_listing">
-                    <input type="checkbox" id="campaign-3">
-                    <label for="campaign-3">Campaign</label>
-                  </div>
-                  <div class="report_check_listing">
-                    <input type="checkbox" id="promotion-4">
-                    <label for="promotion-4">Promotion</label>
-                  </div>
-                  <div class="report_check_listing">
-                    <input type="checkbox" id="list-5">
-                    <label for="list-5">List</label>
-                  </div>
-                  <div class="report_check_listing">
-                    <input type="checkbox" id="order-6">
-                    <label for="order-6">Order</label>
-                  </div>
-                </div>
-              </div>
+            <div class="select_field_view">
+              Add Selected fields to the report
             </div>
           </div>
-          <div class="select_field_view">
-            Add Selected fields to the report
+          <div id="field" class="tab-pane fade">
+            <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+                      Field Group 0
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    <div class="report_check_listing">
+                      <input type="checkbox" id="field-7">
+                      <label for="field-7">Field 1</label>
+                    </div>
+                    <div class="report_check_listing">
+                      <input type="checkbox" id="field-8">
+                      <label for="field-8">Field 2</label>
+                    </div>
+                    <div class="report_check_listing">
+                      <input type="checkbox" id="field-9">
+                      <label for="field-9">Field 3</label>
+                    </div>
+                    <div class="report_check_listing">
+                      <input type="checkbox" id="field-10">
+                      <label for="field-10">Field 4</label>
+                    </div>
+                    <div class="report_check_listing">
+                      <input type="checkbox" id="field-11">
+                      <label for="field-11">Field 5</label>
+                    </div>
+                    <div class="report_check_listing">
+                      <input type="checkbox" id="field-12">
+                      <label for="field-12">Field 6</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo2">
+                  <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+                      Field Group 1
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseTwo2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo2">
+                  <div class="panel-body">
+                    <div class="report_check_listing">
+                      <input type="checkbox" id="field-1">
+                      <label for="field-1">Field 1</label>
+                    </div>
+                    <div class="report_check_listing">
+                      <input type="checkbox" id="field-2">
+                      <label for="field-2">Field 2</label>
+                    </div>
+                    <div class="report_check_listing">
+                      <input type="checkbox" id="field-3">
+                      <label for="field-3">Field 3</label>
+                    </div>
+                    <div class="report_check_listing">
+                      <input type="checkbox" id="field-4">
+                      <label for="field-4">Field 4</label>
+                    </div>
+                    <div class="report_check_listing">
+                      <input type="checkbox" id="field-5">
+                      <label for="field-5">Field 5</label>
+                    </div>
+                    <div class="report_check_listing">
+                      <input type="checkbox" id="field-6">
+                      <label for="field-6">Field 6</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="select_field_view">
+              Add Selected fields to the report
+            </div>
           </div>
         </div>
-        <div id="field" class="tab-pane fade">
-          <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
-            <div class="panel panel-default">
-              <div class="panel-heading" role="tab" id="headingOne">
-                <h4 class="panel-title">
-                  <a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
-                    Field Group 0
-                  </a>
-                </h4>
-              </div>
-              <div id="collapseOne2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                <div class="panel-body">
-                  <div class="report_check_listing">
-                    <input type="checkbox" id="field-7">
-                    <label for="field-7">Field 1</label>
-                  </div>
-                  <div class="report_check_listing">
-                    <input type="checkbox" id="field-8">
-                    <label for="field-8">Field 2</label>
-                  </div>
-                  <div class="report_check_listing">
-                    <input type="checkbox" id="field-9">
-                    <label for="field-9">Field 3</label>
-                  </div>
-                  <div class="report_check_listing">
-                    <input type="checkbox" id="field-10">
-                    <label for="field-10">Field 4</label>
-                  </div>
-                  <div class="report_check_listing">
-                    <input type="checkbox" id="field-11">
-                    <label for="field-11">Field 5</label>
-                  </div>
-                  <div class="report_check_listing">
-                    <input type="checkbox" id="field-12">
-                    <label for="field-12">Field 6</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading" role="tab" id="headingTwo2">
-                <h4 class="panel-title">
-                  <a class="accordion-toggle collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
-                    Field Group 1
-                  </a>
-                </h4>
-              </div>
-              <div id="collapseTwo2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo2">
-                <div class="panel-body">
-                  <div class="report_check_listing">
-                    <input type="checkbox" id="field-1">
-                    <label for="field-1">Field 1</label>
-                  </div>
-                  <div class="report_check_listing">
-                    <input type="checkbox" id="field-2">
-                    <label for="field-2">Field 2</label>
-                  </div>
-                  <div class="report_check_listing">
-                    <input type="checkbox" id="field-3">
-                    <label for="field-3">Field 3</label>
-                  </div>
-                  <div class="report_check_listing">
-                    <input type="checkbox" id="field-4">
-                    <label for="field-4">Field 4</label>
-                  </div>
-                  <div class="report_check_listing">
-                    <input type="checkbox" id="field-5">
-                    <label for="field-5">Field 5</label>
-                  </div>
-                  <div class="report_check_listing">
-                    <input type="checkbox" id="field-6">
-                    <label for="field-6">Field 6</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="select_field_view">
-            Add Selected fields to the report
-          </div>
+      </div><!-- report_tab_view End -->
+    </div><!-- report_left_section End -->
+    <div class="report_right_section">
+      <div class="right_header_view clearfix">
+        <div class="back_arrow">
+          <i class="fa fa-angle-left" aria-hidden="true"></i>
         </div>
-      </div>
-    </div><!-- report_tab_view End -->
-  </div><!-- report_left_section End -->
-  <div class="report_right_section">
-    <div class="right_header_view clearfix">
-      <div class="back_arrow">
-        <i class="fa fa-angle-left" aria-hidden="true"></i>
-      </div>
-      <div class="add_filter_view">
-        <div class="repo_pro_dro">
-            <div class="pro_drop_list pro_li_drop" (click)="showProduct()">Product Name
+        <div class="add_filter_view">
+          <div class="repo_pro_dro">
+              <div class="pro_drop_list pro_li_drop" (click)="showProduct()">Product Name
+                <span class="caret"></span>
+              </div>
+              <ul *ngIf="isProduct">
+                <div class="panel-group" id="accordion3">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseOne3">
+                          Saved Filters
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne3" class="panel-collapse collapse in">
+                      <div class="panel-body">
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="save-1" checked>
+                          <label for="save-1">Saved Filter 1</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="save-2">
+                          <label for="save-2">Saved Filter 2</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapseSex3">
+                          Products
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseSex3" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="pro-1">
+                          <label for="pro-1">Product Name</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="pro-2">
+                          <label for="pro-2">Product SKU</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="pro-3">
+                          <label for="pro-3">Product Barcode</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="pro-4">
+                          <label for="pro-4">Product Type</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="pro-5">
+                          <label for="pro-5">Country of Origin</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="pro-6">
+                          <label for="pro-6">Is Virtual</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="pro-7">
+                          <label for="pro-7">Buy Cost</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="pro-8">
+                          <label for="pro-8">Finished Cost</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="pro-9">
+                          <label for="pro-9">Retail Costs</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="pro-10">
+                          <label for="pro-10">Wholesale</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="pro-11">
+                          <label for="pro-11">Height</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="pro-12">
+                          <label for="pro-12">Width</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="pro-13">
+                          <label for="pro-13">Depth</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="pro-14">
+                          <label for="pro-14">Weight (OZ)</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="pro-15">
+                          <label for="pro-15">Size</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="pro-16">
+                          <label for="pro-16">Flavor</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="pro-17">
+                          <label for="pro-17">Color</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="pro-18">
+                          <label for="pro-18">Gender</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="pro-19">
+                          <label for="pro-19">Available Units</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="pro-20">
+                          <label for="pro-20">Inbound Units</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="pro-21">
+                          <label for="pro-21">Lot Number</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="pro-22">
+                          <label for="pro-22">Label ID</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapseTwo3">
+                          Pruchase Orders
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseTwo3" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="save-3" checked>
+                          <label for="save-3">Saved Filter 1</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="save-4">
+                          <label for="save-4">Saved Filter 2</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapseThree3">
+                          Vendors
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseThree3" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="save-5" checked>
+                          <label for="save-5">Saved Filter 1</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="save-6">
+                          <label for="save-6">Saved Filter 2</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapseFour3">
+                          Warehouse
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseFour3" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="save-7" checked>
+                          <label for="save-7">Saved Filter 1</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="save-8">
+                          <label for="save-8">Saved Filter 2</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapseFive3">
+                          Fulfilment Center
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseFive3" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="save-9" checked>
+                          <label for="save-9">Saved Filter 1</label>
+                        </div>
+                        <div class="report_check_listing">
+                          <input type="radio" name="filter" value="save" id="save-10">
+                          <label for="save-10">Saved Filter 2</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+          </div>
+          <div class="repo_pro_dro contains_dropdown_view">
+            <div class="pro_drop_list" (click)="showContains()">Contains
               <span class="caret"></span>
             </div>
-            <ul *ngIf="isProduct">
-              <div class="panel-group" id="accordion3">
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseOne3">
-                        Saved Filters
-                      </a>
-                    </h4>
+            <ul *ngIf="isContains">
+              <div class="report_check_listing">
+                <input type="radio" name="filter" value="save" id="contains">
+                <label for="contains" class="test">contains 1</label>
+              </div>
+              <div class="report_check_listing">
+                <input type="radio" name="filter" value="save" id="contains-2">
+                <label for="contains-2">contains 2</label>
+              </div>
+            </ul>
+          </div><!-- contains_dropdown_view End -->
+          <div class="add_contain_view">
+            <input type="text" class="form-control" id="">
+          </div>
+          <div class="rep_filt_close">
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </div>
+        </div><!-- add_filter_view end -->
+        <div class="plus_filter_view">
+          <!-- <i class="fa fa-plus-square" aria-hidden="true"></i> -->
+          <img src="../assets/plus-icon.png" alt="plus-icon">
+        </div>
+        <p class="narrow_filter">Add Filters to narrow the data you are seeing</p>
+        <div class="pull-right change_dima_view">
+          <div class="repo_pro_dro">
+            <div class="pro_drop_list ch_rep" (click)="showFilters()">Change Views
+              <span class="caret"></span>
+            </div>
+            <ul *ngIf="isShow">
+              <div class='drophere'>
+                <div class="dragtittle">Dimensions</div>
+                <div class="draghere_list">
+                  <div class="drag_view">
+                    <img src="../assets/dot.png" alt="dot">
+                    Company 
+                    <img src="../assets/cancel.png" alt="cancel" class="fa_close">
                   </div>
-                  <div id="collapseOne3" class="panel-collapse collapse in">
-                    <div class="panel-body">
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="save-1" checked>
-                        <label for="save-1">Saved Filter 1</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="save-2">
-                        <label for="save-2">Saved Filter 2</label>
-                      </div>
-                    </div>
+                  <div class="drag_view">
+                    <img src="../assets/dot.png" alt="dot">
+                    Master Product 
+                    <img src="../assets/cancel.png" alt="cancel" class="fa_close">
                   </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapseSex3">
-                        Products
-                      </a>
-                    </h4>
-                  </div>
-                  <div id="collapseSex3" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="pro-1">
-                        <label for="pro-1">Product Name</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="pro-2">
-                        <label for="pro-2">Product SKU</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="pro-3">
-                        <label for="pro-3">Product Barcode</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="pro-4">
-                        <label for="pro-4">Product Type</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="pro-5">
-                        <label for="pro-5">Country of Origin</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="pro-6">
-                        <label for="pro-6">Is Virtual</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="pro-7">
-                        <label for="pro-7">Buy Cost</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="pro-8">
-                        <label for="pro-8">Finished Cost</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="pro-9">
-                        <label for="pro-9">Retail Costs</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="pro-10">
-                        <label for="pro-10">Wholesale</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="pro-11">
-                        <label for="pro-11">Height</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="pro-12">
-                        <label for="pro-12">Width</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="pro-13">
-                        <label for="pro-13">Depth</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="pro-14">
-                        <label for="pro-14">Weight (OZ)</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="pro-15">
-                        <label for="pro-15">Size</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="pro-16">
-                        <label for="pro-16">Flavor</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="pro-17">
-                        <label for="pro-17">Color</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="pro-18">
-                        <label for="pro-18">Gender</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="pro-19">
-                        <label for="pro-19">Available Units</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="pro-20">
-                        <label for="pro-20">Inbound Units</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="pro-21">
-                        <label for="pro-21">Lot Number</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="pro-22">
-                        <label for="pro-22">Label ID</label>
-                      </div>
-                    </div>
+                  <div class="drag_view">
+                    <img src="../assets/dot.png" alt="dot">
+                    Promotion 
+                    <img src="../assets/cancel.png" alt="cancel" class="fa_close">
                   </div>
                 </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapseTwo3">
-                        Pruchase Orders
-                      </a>
-                    </h4>
+                <!-- <div class="draghere">Draggable 1</div> -->
+              </div>
+              <div class='drophere'>
+                <div class="dragtittle">Fields</div>
+                <div class="draghere_list">
+                  <div class="drag_view">
+                    <img src="../assets/dot.png" alt="dot">
+                    Filed 1 
+                    <img src="../assets/cancel.png" alt="cancel" class="fa_close">
                   </div>
-                  <div id="collapseTwo3" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="save-3" checked>
-                        <label for="save-3">Saved Filter 1</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="save-4">
-                        <label for="save-4">Saved Filter 2</label>
-                      </div>
-                    </div>
+                  <div class="drag_view">
+                    <img src="../assets/dot.png" alt="dot">
+                    Filed 2 
+                    <img src="../assets/cancel.png" alt="cancel" class="fa_close">
                   </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapseThree3">
-                        Vendors
-                      </a>
-                    </h4>
-                  </div>
-                  <div id="collapseThree3" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="save-5" checked>
-                        <label for="save-5">Saved Filter 1</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="save-6">
-                        <label for="save-6">Saved Filter 2</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapseFour3">
-                        Warehouse
-                      </a>
-                    </h4>
-                  </div>
-                  <div id="collapseFour3" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="save-7" checked>
-                        <label for="save-7">Saved Filter 1</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="save-8">
-                        <label for="save-8">Saved Filter 2</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapseFive3">
-                        Fulfilment Center
-                      </a>
-                    </h4>
-                  </div>
-                  <div id="collapseFive3" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="save-9" checked>
-                        <label for="save-9">Saved Filter 1</label>
-                      </div>
-                      <div class="report_check_listing">
-                        <input type="radio" name="filter" value="save" id="save-10">
-                        <label for="save-10">Saved Filter 2</label>
-                      </div>
-                    </div>
+                  <div class="drag_view">
+                    <img src="../assets/dot.png" alt="dot">
+                    Filed 3 
+                    <img src="../assets/cancel.png" alt="cancel" class="fa_close">
                   </div>
                 </div>
               </div>
             </ul>
+          </div><!-- contains_dropdown_view End -->
         </div>
-        <div class="repo_pro_dro contains_dropdown_view">
-          <div class="pro_drop_list" (click)="showContains()">Contains
-            <span class="caret"></span>
-          </div>
-          <ul *ngIf="isContains">
-            <div class="report_check_listing">
-              <input type="radio" name="filter" value="save" id="contains">
-              <label for="contains" class="test">contains 1</label>
-            </div>
-            <div class="report_check_listing">
-              <input type="radio" name="filter" value="save" id="contains-2">
-              <label for="contains-2">contains 2</label>
-            </div>
-          </ul>
-        </div><!-- contains_dropdown_view End -->
-        <div class="add_contain_view">
-          <input type="text" class="form-control" id="">
-        </div>
-        <div class="rep_filt_close">
-          <i class="fa fa-times" aria-hidden="true"></i>
-        </div>
-      </div><!-- add_filter_view end -->
-      <div class="plus_filter_view">
-        <!-- <i class="fa fa-plus-square" aria-hidden="true"></i> -->
-        <img src="../assets/plus-icon.png" alt="plus-icon">
-      </div>
-      <p class="narrow_filter">Add Filters to narrow the data you are seeing</p>
-      <div class="pull-right change_dima_view">
-        <div class="repo_pro_dro">
-          <div class="pro_drop_list ch_rep" (click)="showFilters()">Change Views
-            <span class="caret"></span>
-          </div>
-          <ul *ngIf="isShow">
-            <div class='drophere'>
-              <div class="dragtittle">Dimensions</div>
-              <div class="draghere_list">
-                <div class="drag_view">
-                  <img src="../assets/dot.png" alt="dot">
-                  Company 
-                  <img src="../assets/cancel.png" alt="cancel" class="fa_close">
-                </div>
-                <div class="drag_view">
-                  <img src="../assets/dot.png" alt="dot">
-                  Master Product 
-                  <img src="../assets/cancel.png" alt="cancel" class="fa_close">
-                </div>
-                <div class="drag_view">
-                  <img src="../assets/dot.png" alt="dot">
-                  Promotion 
-                  <img src="../assets/cancel.png" alt="cancel" class="fa_close">
-                </div>
+      </div><!-- right_header_view End -->
+      <div class="report_table_view clearfix">
+        <div class="rep_left_col">
+          <div class="rep_col_fix">
+            <div class="rep_col_tittle">
+              <div class="drag_col_icon"><img src="../assets/dot.png"></div>
+              <h2>Campaign</h2>
+              <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><span><i class="fa fa-list-ul" aria-hidden="true"></i></span> Ungroup</li>
+                    <li><span><i class="fa fa-arrow-up" aria-hidden="true"></i></span> Order Ascending</li>
+                    <li><span><i class="fa fa-arrow-down" aria-hidden="true"></i></span> Order Descending</li>
+                    <li><span><i class="fa fa-align-center" aria-hidden="true"></i></span> Apply Filter</li>
+                    <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Remove Column</li>
+                  </ul>
               </div>
-              <!-- <div class="draghere">Draggable 1</div> -->
+            </div><!-- rep_col_tittle End -->
+            <div class="report_detail_blog">
+              <div class="listing_repo">
+                <h5>Line 1 Campaign long name</h5>
+                <h6>Line 2 campaign information</h6>
+              </div>
+              <div class="empty_repo"></div>
+              <div class="empty_repo"></div>
+              <div class="listing_repo">
+                <h5>Line 1 Campaign long name</h5>
+                <h6>Line 2 campaign information</h6>
+              </div>
+              <div class="empty_repo"></div>
+              <div class="listing_repo">
+                <h5>Line 1 Campaign long name</h5>
+                <h6>Line 2 campaign information</h6>
+              </div>
+              <div class="empty_repo"></div>
+              <div class="listing_repo">
+                <h5>Line 1 Campaign long name</h5>
+                <h6>Line 2 campaign information</h6>
+              </div>
+              <div class="empty_repo"></div>
             </div>
-            <div class='drophere'>
-              <div class="dragtittle">Fields</div>
-              <div class="draghere_list">
-                <div class="drag_view">
-                  <img src="../assets/dot.png" alt="dot">
-                  Filed 1 
-                  <img src="../assets/cancel.png" alt="cancel" class="fa_close">
-                </div>
-                <div class="drag_view">
-                  <img src="../assets/dot.png" alt="dot">
-                  Filed 2 
-                  <img src="../assets/cancel.png" alt="cancel" class="fa_close">
-                </div>
-                <div class="drag_view">
-                  <img src="../assets/dot.png" alt="dot">
-                  Filed 3 
-                  <img src="../assets/cancel.png" alt="cancel" class="fa_close">
-                </div>
+            <div class="show_report_result"></div>
+          </div>
+          <div class="rep_col_fix">
+            <div class="rep_col_tittle">
+              <div class="drag_col_icon"><img src="../assets/dot.png"></div>
+              <h2>Master Product</h2>
+              <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><span><i class="fa fa-list-ul" aria-hidden="true"></i></span> Ungroup</li>
+                    <li><span><i class="fa fa-arrow-up" aria-hidden="true"></i></span> Order Ascending</li>
+                    <li><span><i class="fa fa-arrow-down" aria-hidden="true"></i></span> Order Descending</li>
+                    <li><span><i class="fa fa-align-center" aria-hidden="true"></i></span> Apply Filter</li>
+                    <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Remove Column</li>
+                  </ul>
+              </div>
+            </div><!-- rep_col_tittle End -->
+            <div class="report_detail_blog">
+              <div class="listing_repo">
+                <h5>Line 1 Campaign long name</h5>
+                <h6>Line 2 campaign information</h6>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>Line 1 Campaign long name</h5>
+                <h6>Line 2 campaign information</h6>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>Line 1 Campaign long name</h5>
+                <h6>Line 2 campaign information</h6>
+              </div>
+              <div class="listing_repo">
+                <h5>Line 1 Campaign long name</h5>
+                <h6>Line 2 campaign information</h6>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>Line 1 Campaign long name</h5>
+                <h6>Line 2 campaign information</h6>
+              </div>
+              <div class="listing_repo">
+                <h5>Line 1 Campaign long name</h5>
+                <h6>Line 2 campaign information</h6>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>Line 1 Campaign long name</h5>
+                <h6>Line 2 campaign information</h6>
+              </div>
+              <div class="listing_repo">
+                <h5>Line 1 Campaign long name</h5>
+                <h6>Line 2 campaign information</h6>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>Line 1 Campaign long name</h5>
+                <h6>Line 2 campaign information</h6>
               </div>
             </div>
-          </ul>
-        </div><!-- contains_dropdown_view End -->
-      </div>
-    </div><!-- right_header_view End -->
-    <div class="report_table_view clearfix">
-      <div class="rep_left_col">
-        <div class="rep_col_fix">
-          <div class="rep_col_tittle">
-            <div class="drag_col_icon"><img src="../assets/dot.png"></div>
-            <h2>Campaign</h2>
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><span><i class="fa fa-list-ul" aria-hidden="true"></i></span> Ungroup</li>
-                  <li><span><i class="fa fa-arrow-up" aria-hidden="true"></i></span> Order Ascending</li>
-                  <li><span><i class="fa fa-arrow-down" aria-hidden="true"></i></span> Order Descending</li>
-                  <li><span><i class="fa fa-align-center" aria-hidden="true"></i></span> Apply Filter</li>
-                  <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Remove Column</li>
-                </ul>
+            <div class="show_report_result">
+              <h5>Results from filters</h5>
+              <h6>The totals show represent any filters that you have applied.</h6>
             </div>
-          </div><!-- rep_col_tittle End -->
-          <div class="report_detail_blog">
-            <div class="listing_repo">
-              <h5>Line 1 Campaign long name</h5>
-              <h6>Line 2 campaign information</h6>
-            </div>
-            <div class="empty_repo"></div>
-            <div class="empty_repo"></div>
-            <div class="listing_repo">
-              <h5>Line 1 Campaign long name</h5>
-              <h6>Line 2 campaign information</h6>
-            </div>
-            <div class="empty_repo"></div>
-            <div class="listing_repo">
-              <h5>Line 1 Campaign long name</h5>
-              <h6>Line 2 campaign information</h6>
-            </div>
-            <div class="empty_repo"></div>
-            <div class="listing_repo">
-              <h5>Line 1 Campaign long name</h5>
-              <h6>Line 2 campaign information</h6>
-            </div>
-            <div class="empty_repo"></div>
           </div>
-          <div class="show_report_result"></div>
+          <div class="rep_col_fix">
+            <div class="rep_col_tittle">
+              <div class="drag_col_icon"><img src="../assets/dot.png"></div>
+              <h2>Master Product</h2>
+              <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><span><i class="fa fa-list-ul" aria-hidden="true"></i></span> Ungroup</li>
+                    <li><span><i class="fa fa-arrow-up" aria-hidden="true"></i></span> Order Ascending</li>
+                    <li><span><i class="fa fa-arrow-down" aria-hidden="true"></i></span> Order Descending</li>
+                    <li><span><i class="fa fa-align-center" aria-hidden="true"></i></span> Apply Filter</li>
+                    <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Remove Column</li>
+                  </ul>
+              </div>
+            </div><!-- rep_col_tittle End -->
+            <div class="report_detail_blog">
+              <div class="listing_repo">
+                <h5>Line 1 Campaign long name</h5>
+                <h6>Line 2 campaign information</h6>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>Line 1 Campaign long name</h5>
+                <h6>Line 2 campaign information</h6>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>Line 1 Campaign long name</h5>
+                <h6>Line 2 campaign information</h6>
+              </div>
+              <div class="listing_repo">
+                <h5>Line 1 Campaign long name</h5>
+                <h6>Line 2 campaign information</h6>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>Line 1 Campaign long name</h5>
+                <h6>Line 2 campaign information</h6>
+              </div>
+              <div class="listing_repo">
+                <h5>Line 1 Campaign long name</h5>
+                <h6>Line 2 campaign information</h6>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>Line 1 Campaign long name</h5>
+                <h6>Line 2 campaign information</h6>
+              </div>
+              <div class="listing_repo">
+                <h5>Line 1 Campaign long name</h5>
+                <h6>Line 2 campaign information</h6>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>Line 1 Campaign long name</h5>
+                <h6>Line 2 campaign information</h6>
+              </div>
+            </div>
+            <div class="show_report_result">
+              <h5>Results from filters</h5>
+              <h6>The totals show represent any filters that you have applied.</h6>
+            </div>
+          </div>
+        </div><!-- rep_left_col End -->
+        <div class="rep_right_col">
+          <div class="rep_col_fix">
+            <div class="rep_col_tittle">
+              <div class="drag_col_icon"><img src="../assets/dot.png"></div>
+              <h2>Filed 6</h2>
+              <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><span><i class="fa fa-list-ul" aria-hidden="true"></i></span> Ungroup</li>
+                    <li><span><i class="fa fa-arrow-up" aria-hidden="true"></i></span> Order Ascending</li>
+                    <li><span><i class="fa fa-arrow-down" aria-hidden="true"></i></span> Order Descending</li>
+                    <li><span><i class="fa fa-align-center" aria-hidden="true"></i></span> Apply Filter</li>
+                    <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Remove Column</li>
+                  </ul>
+              </div>
+            </div><!-- rep_col_tittle End -->
+            <div class="report_detail_blog">
+              <div class="listing_repo">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>455 456 456.00</h5>
+              </div>
+              <div class="listing_repo">
+                <h5>455 456 456.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+            </div>
+            <div class="show_report_result">
+              <h5>1 112 223 114 units</h5>
+              <h6>Total Available Units</h6>
+            </div>
+          </div>
+          <div class="rep_col_fix">
+            <div class="rep_col_tittle">
+              <div class="drag_col_icon"><img src="../assets/dot.png"></div>
+              <h2>Filed 6</h2>
+              <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><span><i class="fa fa-list-ul" aria-hidden="true"></i></span> Ungroup</li>
+                    <li><span><i class="fa fa-arrow-up" aria-hidden="true"></i></span> Order Ascending</li>
+                    <li><span><i class="fa fa-arrow-down" aria-hidden="true"></i></span> Order Descending</li>
+                    <li><span><i class="fa fa-align-center" aria-hidden="true"></i></span> Apply Filter</li>
+                    <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Remove Column</li>
+                  </ul>
+              </div>
+            </div><!-- rep_col_tittle End -->
+            <div class="report_detail_blog">
+              <div class="listing_repo">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>455 456 456.00</h5>
+              </div>
+              <div class="listing_repo">
+                <h5>455 456 456.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+            </div>
+            <div class="show_report_result">
+              <h5>1 112 223 114 units</h5>
+              <h6>Total Available Units</h6>
+            </div>
+          </div>
+          <div class="rep_col_fix">
+            <div class="rep_col_tittle">
+              <div class="drag_col_icon"><img src="../assets/dot.png"></div>
+              <h2>Filed 6</h2>
+              <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><span><i class="fa fa-list-ul" aria-hidden="true"></i></span> Ungroup</li>
+                    <li><span><i class="fa fa-arrow-up" aria-hidden="true"></i></span> Order Ascending</li>
+                    <li><span><i class="fa fa-arrow-down" aria-hidden="true"></i></span> Order Descending</li>
+                    <li><span><i class="fa fa-align-center" aria-hidden="true"></i></span> Apply Filter</li>
+                    <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Remove Column</li>
+                  </ul>
+              </div>
+            </div><!-- rep_col_tittle End -->
+            <div class="report_detail_blog">
+              <div class="listing_repo">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>455 456 456.00</h5>
+              </div>
+              <div class="listing_repo">
+                <h5>455 456 456.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+            </div>
+            <div class="show_report_result"></div>
+          </div>
+          <div class="rep_col_fix">
+            <div class="rep_col_tittle">
+              <div class="drag_col_icon"><img src="../assets/dot.png"></div>
+              <h2>Filed 6</h2>
+              <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><span><i class="fa fa-list-ul" aria-hidden="true"></i></span> Ungroup</li>
+                    <li><span><i class="fa fa-arrow-up" aria-hidden="true"></i></span> Order Ascending</li>
+                    <li><span><i class="fa fa-arrow-down" aria-hidden="true"></i></span> Order Descending</li>
+                    <li><span><i class="fa fa-align-center" aria-hidden="true"></i></span> Apply Filter</li>
+                    <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Remove Column</li>
+                  </ul>
+              </div>
+            </div><!-- rep_col_tittle End -->
+            <div class="report_detail_blog">
+              <div class="listing_repo">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>455 456 456.00</h5>
+              </div>
+              <div class="listing_repo">
+                <h5>455 456 456.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+            </div>
+            <div class="show_report_result"></div>
+          </div>
+          <div class="rep_col_fix">
+            <div class="rep_col_tittle">
+              <div class="drag_col_icon"><img src="../assets/dot.png"></div>
+              <h2>Filed 6</h2>
+              <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><span><i class="fa fa-list-ul" aria-hidden="true"></i></span> Ungroup</li>
+                    <li><span><i class="fa fa-arrow-up" aria-hidden="true"></i></span> Order Ascending</li>
+                    <li><span><i class="fa fa-arrow-down" aria-hidden="true"></i></span> Order Descending</li>
+                    <li><span><i class="fa fa-align-center" aria-hidden="true"></i></span> Apply Filter</li>
+                    <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Remove Column</li>
+                  </ul>
+              </div>
+            </div><!-- rep_col_tittle End -->
+            <div class="report_detail_blog">
+              <div class="listing_repo">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>455 456 456.00</h5>
+              </div>
+              <div class="listing_repo">
+                <h5>455 456 456.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+            </div>
+            <div class="show_report_result"></div>
+          </div>
+          <div class="rep_col_fix">
+            <div class="rep_col_tittle">
+              <div class="drag_col_icon"><img src="../assets/dot.png"></div>
+              <h2>Filed 6</h2>
+              <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><span><i class="fa fa-list-ul" aria-hidden="true"></i></span> Ungroup</li>
+                    <li><span><i class="fa fa-arrow-up" aria-hidden="true"></i></span> Order Ascending</li>
+                    <li><span><i class="fa fa-arrow-down" aria-hidden="true"></i></span> Order Descending</li>
+                    <li><span><i class="fa fa-align-center" aria-hidden="true"></i></span> Apply Filter</li>
+                    <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Remove Column</li>
+                  </ul>
+              </div>
+            </div><!-- rep_col_tittle End -->
+            <div class="report_detail_blog">
+              <div class="listing_repo">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>455 456 456.00</h5>
+              </div>
+              <div class="listing_repo">
+                <h5>455 456 456.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+            </div>
+            <div class="show_report_result"></div>
+          </div>
+          <div class="rep_col_fix">
+            <div class="rep_col_tittle">
+              <div class="drag_col_icon"><img src="../assets/dot.png"></div>
+              <h2>Filed 6</h2>
+              <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><span><i class="fa fa-list-ul" aria-hidden="true"></i></span> Ungroup</li>
+                    <li><span><i class="fa fa-arrow-up" aria-hidden="true"></i></span> Order Ascending</li>
+                    <li><span><i class="fa fa-arrow-down" aria-hidden="true"></i></span> Order Descending</li>
+                    <li><span><i class="fa fa-align-center" aria-hidden="true"></i></span> Apply Filter</li>
+                    <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Remove Column</li>
+                  </ul>
+              </div>
+            </div><!-- rep_col_tittle End -->
+            <div class="report_detail_blog">
+              <div class="listing_repo">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>455 456 456.00</h5>
+              </div>
+              <div class="listing_repo">
+                <h5>455 456 456.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+            </div>
+            <div class="show_report_result"></div>
+          </div>
+          <div class="rep_col_fix">
+            <div class="rep_col_tittle">
+              <div class="drag_col_icon"><img src="../assets/dot.png"></div>
+              <h2>Filed 6</h2>
+              <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><span><i class="fa fa-list-ul" aria-hidden="true"></i></span> Ungroup</li>
+                    <li><span><i class="fa fa-arrow-up" aria-hidden="true"></i></span> Order Ascending</li>
+                    <li><span><i class="fa fa-arrow-down" aria-hidden="true"></i></span> Order Descending</li>
+                    <li><span><i class="fa fa-align-center" aria-hidden="true"></i></span> Apply Filter</li>
+                    <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Remove Column</li>
+                  </ul>
+              </div>
+            </div><!-- rep_col_tittle End -->
+            <div class="report_detail_blog">
+              <div class="listing_repo">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>455 456 456.00</h5>
+              </div>
+              <div class="listing_repo">
+                <h5>455 456 456.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo">
+                <h5>56 569.00</h5>
+              </div>
+              <div class="listing_repo repo_white">
+                <h5>56 569.00</h5>
+              </div>
+            </div>
+            <div class="show_report_result"></div>
+          </div>
         </div>
-        <div class="rep_col_fix">
-          <div class="rep_col_tittle">
-            <div class="drag_col_icon"><img src="../assets/dot.png"></div>
-            <h2>Master Product</h2>
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><span><i class="fa fa-list-ul" aria-hidden="true"></i></span> Ungroup</li>
-                  <li><span><i class="fa fa-arrow-up" aria-hidden="true"></i></span> Order Ascending</li>
-                  <li><span><i class="fa fa-arrow-down" aria-hidden="true"></i></span> Order Descending</li>
-                  <li><span><i class="fa fa-align-center" aria-hidden="true"></i></span> Apply Filter</li>
-                  <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Remove Column</li>
-                </ul>
-            </div>
-          </div><!-- rep_col_tittle End -->
-          <div class="report_detail_blog">
-            <div class="listing_repo">
-              <h5>Line 1 Campaign long name</h5>
-              <h6>Line 2 campaign information</h6>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>Line 1 Campaign long name</h5>
-              <h6>Line 2 campaign information</h6>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>Line 1 Campaign long name</h5>
-              <h6>Line 2 campaign information</h6>
-            </div>
-            <div class="listing_repo">
-              <h5>Line 1 Campaign long name</h5>
-              <h6>Line 2 campaign information</h6>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>Line 1 Campaign long name</h5>
-              <h6>Line 2 campaign information</h6>
-            </div>
-            <div class="listing_repo">
-              <h5>Line 1 Campaign long name</h5>
-              <h6>Line 2 campaign information</h6>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>Line 1 Campaign long name</h5>
-              <h6>Line 2 campaign information</h6>
-            </div>
-            <div class="listing_repo">
-              <h5>Line 1 Campaign long name</h5>
-              <h6>Line 2 campaign information</h6>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>Line 1 Campaign long name</h5>
-              <h6>Line 2 campaign information</h6>
-            </div>
-          </div>
-          <div class="show_report_result">
-            <h5>Results from filters</h5>
-            <h6>The totals show represent any filters that you have applied.</h6>
-          </div>
-        </div>
-      </div><!-- rep_left_col End -->
-      <div class="rep_right_col">
-        <div class="rep_col_fix">
-          <div class="rep_col_tittle">
-            <div class="drag_col_icon"><img src="../assets/dot.png"></div>
-            <h2>Filed 6</h2>
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><span><i class="fa fa-list-ul" aria-hidden="true"></i></span> Ungroup</li>
-                  <li><span><i class="fa fa-arrow-up" aria-hidden="true"></i></span> Order Ascending</li>
-                  <li><span><i class="fa fa-arrow-down" aria-hidden="true"></i></span> Order Descending</li>
-                  <li><span><i class="fa fa-align-center" aria-hidden="true"></i></span> Apply Filter</li>
-                  <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Remove Column</li>
-                </ul>
-            </div>
-          </div><!-- rep_col_tittle End -->
-          <div class="report_detail_blog">
-            <div class="listing_repo">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>455 456 456.00</h5>
-            </div>
-            <div class="listing_repo">
-              <h5>455 456 456.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>56 569.00</h5>
-            </div>
-          </div>
-          <div class="show_report_result">
-            <h5>1 112 223 114 units</h5>
-            <h6>Total Available Units</h6>
-          </div>
-        </div>
-        <div class="rep_col_fix">
-          <div class="rep_col_tittle">
-            <div class="drag_col_icon"><img src="../assets/dot.png"></div>
-            <h2>Filed 6</h2>
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><span><i class="fa fa-list-ul" aria-hidden="true"></i></span> Ungroup</li>
-                  <li><span><i class="fa fa-arrow-up" aria-hidden="true"></i></span> Order Ascending</li>
-                  <li><span><i class="fa fa-arrow-down" aria-hidden="true"></i></span> Order Descending</li>
-                  <li><span><i class="fa fa-align-center" aria-hidden="true"></i></span> Apply Filter</li>
-                  <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Remove Column</li>
-                </ul>
-            </div>
-          </div><!-- rep_col_tittle End -->
-          <div class="report_detail_blog">
-            <div class="listing_repo">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>455 456 456.00</h5>
-            </div>
-            <div class="listing_repo">
-              <h5>455 456 456.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>56 569.00</h5>
-            </div>
-          </div>
-          <div class="show_report_result">
-            <h5>1 112 223 114 units</h5>
-            <h6>Total Available Units</h6>
-          </div>
-        </div>
-        <div class="rep_col_fix">
-          <div class="rep_col_tittle">
-            <div class="drag_col_icon"><img src="../assets/dot.png"></div>
-            <h2>Filed 6</h2>
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><span><i class="fa fa-list-ul" aria-hidden="true"></i></span> Ungroup</li>
-                  <li><span><i class="fa fa-arrow-up" aria-hidden="true"></i></span> Order Ascending</li>
-                  <li><span><i class="fa fa-arrow-down" aria-hidden="true"></i></span> Order Descending</li>
-                  <li><span><i class="fa fa-align-center" aria-hidden="true"></i></span> Apply Filter</li>
-                  <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Remove Column</li>
-                </ul>
-            </div>
-          </div><!-- rep_col_tittle End -->
-          <div class="report_detail_blog">
-            <div class="listing_repo">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>455 456 456.00</h5>
-            </div>
-            <div class="listing_repo">
-              <h5>455 456 456.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>56 569.00</h5>
-            </div>
-          </div>
-          <div class="show_report_result"></div>
-        </div>
-        <div class="rep_col_fix">
-          <div class="rep_col_tittle">
-            <div class="drag_col_icon"><img src="../assets/dot.png"></div>
-            <h2>Filed 6</h2>
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><span><i class="fa fa-list-ul" aria-hidden="true"></i></span> Ungroup</li>
-                  <li><span><i class="fa fa-arrow-up" aria-hidden="true"></i></span> Order Ascending</li>
-                  <li><span><i class="fa fa-arrow-down" aria-hidden="true"></i></span> Order Descending</li>
-                  <li><span><i class="fa fa-align-center" aria-hidden="true"></i></span> Apply Filter</li>
-                  <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Remove Column</li>
-                </ul>
-            </div>
-          </div><!-- rep_col_tittle End -->
-          <div class="report_detail_blog">
-            <div class="listing_repo">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>455 456 456.00</h5>
-            </div>
-            <div class="listing_repo">
-              <h5>455 456 456.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>56 569.00</h5>
-            </div>
-          </div>
-          <div class="show_report_result"></div>
-        </div>
-        <div class="rep_col_fix">
-          <div class="rep_col_tittle">
-            <div class="drag_col_icon"><img src="../assets/dot.png"></div>
-            <h2>Filed 6</h2>
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><span><i class="fa fa-list-ul" aria-hidden="true"></i></span> Ungroup</li>
-                  <li><span><i class="fa fa-arrow-up" aria-hidden="true"></i></span> Order Ascending</li>
-                  <li><span><i class="fa fa-arrow-down" aria-hidden="true"></i></span> Order Descending</li>
-                  <li><span><i class="fa fa-align-center" aria-hidden="true"></i></span> Apply Filter</li>
-                  <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Remove Column</li>
-                </ul>
-            </div>
-          </div><!-- rep_col_tittle End -->
-          <div class="report_detail_blog">
-            <div class="listing_repo">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>455 456 456.00</h5>
-            </div>
-            <div class="listing_repo">
-              <h5>455 456 456.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>56 569.00</h5>
-            </div>
-          </div>
-          <div class="show_report_result"></div>
-        </div>
-        <div class="rep_col_fix">
-          <div class="rep_col_tittle">
-            <div class="drag_col_icon"><img src="../assets/dot.png"></div>
-            <h2>Filed 6</h2>
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><span><i class="fa fa-list-ul" aria-hidden="true"></i></span> Ungroup</li>
-                  <li><span><i class="fa fa-arrow-up" aria-hidden="true"></i></span> Order Ascending</li>
-                  <li><span><i class="fa fa-arrow-down" aria-hidden="true"></i></span> Order Descending</li>
-                  <li><span><i class="fa fa-align-center" aria-hidden="true"></i></span> Apply Filter</li>
-                  <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Remove Column</li>
-                </ul>
-            </div>
-          </div><!-- rep_col_tittle End -->
-          <div class="report_detail_blog">
-            <div class="listing_repo">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>455 456 456.00</h5>
-            </div>
-            <div class="listing_repo">
-              <h5>455 456 456.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo">
-              <h5>56 569.00</h5>
-            </div>
-            <div class="listing_repo repo_white">
-              <h5>56 569.00</h5>
-            </div>
-          </div>
-          <div class="show_report_result"></div>
-        </div>
-      </div>
-    </div><!-- report_table_view End -->
-  </div><!-- report_right_section End -->
+      </div><!-- report_table_view End -->
+    </div><!-- report_right_section End -->
+  </div>
 </div><!-- header_view End -->
 
 <div id="myModal" class="modal fade" role="dialog">
