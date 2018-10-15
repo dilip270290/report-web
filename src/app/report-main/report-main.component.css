@@ -162,7 +162,7 @@
 	background-color: #3578e5 !important;
     border-color: #3578e5 !important;
     font-size:12px;
-    padding: 4px 12px 6px 12px;
+    padding: 5px 12px 6px 12px;
     height: 28px;
     width: 60px;
     margin-right:2px;
@@ -204,8 +204,7 @@
 	padding: 0;
 }
 .save_drop ul a{
-	font-family: Roboto;
-    font-size: 12px;
+	font-size: 12px;
     font-weight: 300;
     font-style: normal;
     font-stretch: normal;
@@ -226,7 +225,7 @@
 	background-color: #f5f6f7;
 	border: solid 1px #dadde1;
 	color: #444950;
-	padding: 4px 12px 6px 12px;
+	padding: 5px 12px 6px 12px;
 }
 .calender_view{
 	display: inline-block;
@@ -827,19 +826,29 @@
 }
 .rep_col_tittle .dropdown ul{
 	cursor: pointer;
-	padding: 10px;
+	/*padding: 10px;*/
 	right: 0;
     left: inherit;
 }
 .rep_col_tittle .dropdown ul li{
 	font-size: 13px;
-	margin-bottom: 5px;
+	/*margin-bottom: 5px;*/
+	padding: 5px 10px;
+	transition:all .2s ease-in;
+	-webkit-transition:all .2s ease-in;
+	-moz-transition:all .2s ease-in;
+	-ms-transition:all .2s ease-in;
+	-o-transition:all .2s ease-in;
 }
 .rep_col_tittle .dropdown ul li span{
 	display: inline-block;
 	margin-right: 7px;
 	width: 15px;
 	text-align: center;
+}
+.rep_col_tittle .dropdown ul li:hover{
+	background: #3b76d6;
+	color: #ffffff;
 }
 .rep_col_tittle .dropdown .btn{
 	background-color: transparent;
